@@ -1,12 +1,30 @@
 ﻿<Window x:Class="projects.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:projects"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Height="450"
+        Width="800">
+    <DockPanel>
+        <!-- メニュー -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_ファイル">
+                <MenuItem Header="_新規作成"
+                          Click="NewFile_Click"/>
+                <MenuItem Header="_開く..."
+                          Click="OpenFile_Click"/>
+            </MenuItem>
+            <MenuItem Header="_編集">
+                <MenuItem Header="_元に戻す"/>
+                <MenuItem Header="_やり直し"/>
+            </MenuItem>
+            <MenuItem Header="_設定">
+            </MenuItem>
+            <MenuItem Header="_ヘルプ">
+                <MenuItem Header="_バージョン情報"
+                          Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            
+        </Grid>
+    </DockPanel>
 </Window>
